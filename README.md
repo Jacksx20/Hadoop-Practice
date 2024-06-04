@@ -10,7 +10,12 @@ mr-jobhistory-daemon.sh start historyserver
 
 start-hbase.sh
 
+hive --service metastore &
+hive --service hiveserver2 &
 
+
+
+STOP-----------------------------------------------------
 stop-yarn.sh
 stop-dfs.sh
 mr-jobhistory-daemon.sh stop historyserver
@@ -29,3 +34,5 @@ stop-hbase.sh
 | YARN               | http://172.16.222.20:8088  |
 | HBase Master       | http://172.16.222.20:60010 |
 | HBase RegionServer | http://172.16.222.20:60030 |
+| Hive               | http://172.16.222.20:10002 |
+
