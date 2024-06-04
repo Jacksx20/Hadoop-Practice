@@ -36,6 +36,9 @@
 	        <value>*</value>
                 <description>可通过超级代理“xxx”操作hadoop的用户、用户组和主机。重启hdfs</description>
         </property>
-
+         <property>
+                <name>ha.zookeeper.quorum</name>
+                <value>Hadoopjc:2181</value>
+        </property>
 
 </configuration>

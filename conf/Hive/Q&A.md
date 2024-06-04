@@ -49,7 +49,7 @@ exit
 重启
 
 ```shell
-service mysql restart
+sudo service mysql restart
 mysql -u root -p
 ```
 
@@ -60,8 +60,7 @@ mysql -u root -p
 ```shell
 CREATE USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY '1q2w#E$R';
 
-CREATE USER 'hive'@'%' IDENTIFIED WITH mysql_native_password BY 'hive';
-flush privileges;
+c
 ```
 
 **改 MySQL 配置文件**
@@ -103,6 +102,8 @@ GRANT ALL ON *.* TO 'hive'@'localhost';
 create user 'hive'@'%' identified by 'hive';
 grant all on *.* to 'hive'@'%';
 flush privileges;
+create database hive;
+exit;
 ```
 
 

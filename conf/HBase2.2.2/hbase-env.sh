@@ -44,7 +44,7 @@
 export HBASE_OPTS="$HBASE_OPTS -XX:+UseConcMarkSweepGC"
 export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_371
 export HBASE_CLASSPATH=/usr/local/hbase/conf 
-export HBASE_MANAGES_ZK=true
+#export HBASE_MANAGES_ZK=true
 # Uncomment one of the below three options to enable java garbage collection logging for the server-side processes.
 
 # This enables basic gc logging to the .out file.

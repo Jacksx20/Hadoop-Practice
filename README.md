@@ -4,6 +4,7 @@ Basic Programming Practice of Big Data
 
 ```bash
 cd /usr/local/hadoop
+hdfs --daemon start journalnode
 start-dfs.sh
 start-yarn.sh
 mr-jobhistory-daemon.sh start historyserver
@@ -16,10 +17,13 @@ hive --service hiveserver2 &
 
 
 STOP-----------------------------------------------------
+
+stop-hbase.sh
 stop-yarn.sh
 stop-dfs.sh
 mr-jobhistory-daemon.sh stop historyserver
 stop-hbase.sh
+hdfs --daemon stop journalnode
 ```
 
 **注意：若在操作HBase的过程中发生错误，可以通过{HBASE\_HOME}目录（/usr/local/hbase）下的logs子目录中的日志文件查看错误原因。**

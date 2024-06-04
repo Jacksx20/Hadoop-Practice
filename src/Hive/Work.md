@@ -15,7 +15,7 @@ mkdir -p /usr/local/hadoop/input
 ```language-shell
 cd  /usr/local/hadoop/input
 echo "All things are difficult before they are easy" > txt1.txt
-echo "With every sun comes a new day" > txt2.txt
+echo "Learn to walk before you run" > txt2.txt
 
 cd  ..
 hdfs dfs -rm -r output
