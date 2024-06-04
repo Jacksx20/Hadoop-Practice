@@ -23,4 +23,10 @@
     <value>hive</value>
     <description>password to use against metastore database</description>
   </property>
+  <property>
+    <name>hive.server2.enable.doAs</name>
+    <value>false</value>
+    <description>关闭主机校验,解决Hive连接报错，显示用户没有权限的问题</description>
+  </property>
+
 </configuration>
