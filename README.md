@@ -4,6 +4,7 @@ Basic Programming Practice of Big Data
 
 ```bash
 cd /usr/local/hadoop
+zkServer.sh start
 hdfs --daemon start journalnode
 start-dfs.sh
 start-yarn.sh
@@ -22,8 +23,9 @@ stop-hbase.sh
 stop-yarn.sh
 stop-dfs.sh
 mr-jobhistory-daemon.sh stop historyserver
-stop-hbase.sh
 hdfs --daemon stop journalnode
+
+zkServer.sh stop
 ```
 
 **注意：若在操作HBase的过程中发生错误，可以通过{HBASE\_HOME}目录（/usr/local/hbase）下的logs子目录中的日志文件查看错误原因。**
@@ -40,3 +42,11 @@ hdfs --daemon stop journalnode
 | HBase RegionServer | http://172.16.222.20:60030 |
 | Hive               | http://172.16.222.20:10002 |
 
+```shell
+#查看 HBase 在 Zookeeper 中的 znode
+zkCli.sh -server Hadoopjc:2181
+
+ls /hbase
+```
+
+<img src="imgs/image-20240605111232722.png" alt="image-20240605111232722" style="zoom:80%;" />

@@ -49,5 +49,31 @@
                 <name>hbase.master.info.port</name>
                 <value>60010</value>
         </property>
+        <!-- 为使用 Phoenix，hbase.client.keyvalue.maxsize 不能设置为 0 -->
+        <property>
+                <name>hbase.client.keyvalue.maxsize</name>
+                <value>10485760</value>
+        </property>
+ 
+        <property>
+                <name>hbase.master.distributed.log.splitting</name>
+                <value>true</value>
+        </property>
+ 
+<!-- 一次 RPC 请求读取的数据行数，该参数设置有助于优化读取效率 -->
+        <property>
+                <name>hbase.client.scanner.caching</name>
+                <value>5000</value>
+        </property>
+<!-- 用于 phoenix 开启 schema 功能--> 
+        <property>
+                <name>phoenix.schema.isNamespaceMappingEnabled</name>
+                <value>true</value>
+        </property>
+ 
+        <property>
+                <name>phoenix.schema.mapSystemTablesToNamespace</name>
+                <value>true</value>
+        </property>
 
 </configuration>
