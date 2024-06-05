@@ -35,8 +35,9 @@ zkServer.sh stop
 ** 启动Hadoop—>启动HBase—>关闭HBase—>关闭Hadoop**
 
 
-| HDFS               | http://172.16.222.20:9870  |
+| 服务               | IP                         |
 | ------------------ | -------------------------- |
+| HDFS               | http://172.16.222.20:9870  |
 | YARN               | http://172.16.222.20:8088  |
 | HBase Master       | http://172.16.222.20:60010 |
 | HBase RegionServer | http://172.16.222.20:60030 |
