@@ -15,6 +15,8 @@ start-hbase.sh
 hive --service metastore &
 hive --service hiveserver2 &
 
+start-cluster.sh
+
 
 
 STOP-----------------------------------------------------
