@@ -40,14 +40,14 @@ zkServer.sh stop
 ** 启动Hadoop—>启动HBase—>关闭HBase—>关闭Hadoop**
 
 
-| 服务               | IP                         |
-| ------------------ | -------------------------- |
-| HDFS               | http://172.16.222.20:9870  |
-| YARN               | http://172.16.222.20:8088  |
-| HBase Master       | http://172.16.222.20:60010 |
-| HBase RegionServer | http://172.16.222.20:60030 |
-| Hive               | http://172.16.222.20:10002 |
-| Flink              | http://172.16.222.20:8081  |
-|                    |                            |
-|                    |                            |
+| 服务               | IP                    |
+| ------------------ | --------------------- |
+| HDFS               | http://Hadoopjc:9870  |
+| YARN               | http://Hadoopjc:8088  |
+| HBase Master       | http://Hadoopjc:60010 |
+| HBase RegionServer | http://Hadoopjc:60030 |
+| Hive               | http://Hadoopjc:10002 |
+| Flink              | http://Hadoopjc:8081  |
+| Spark Master       | http://Hadoopjc:6060/ |
+| Spark Worker       | http://Hadoopjc:6066/ |
 
