@@ -33,11 +33,11 @@ hdfs --daemon stop journalnode
 zkServer.sh stop
 ```
 
-**注意：若在操作HBase的过程中发生错误，可以通过{HBASE\_HOME}目录（/usr/local/hbase）下的logs子目录中的日志文件查看错误原因。**
+**注意：若在操作任何服务的过程中发生错误，可以通过{X\_HOME}目录（/usr/local/X）下的logs子目录中的日志文件查看错误原因。**
 
-** 这里启动关闭Hadoop和HBase的顺序一定是：**
+**这里启动关闭的顺序一定是：**
 
-** 启动Hadoop—>启动HBase—>关闭HBase—>关闭Hadoop**
+**启动Zookeeper—>启动Hadoop—>启动HBase—>启动Hive—>启动Flink—>启动Spark—>关闭HBase、Flink、Spark—>关闭Hadoop—>关闭Zookeeper**
 
 
 | 服务               | IP                    |
@@ -48,6 +48,5 @@ zkServer.sh stop
 | HBase RegionServer | http://Hadoopjc:60030 |
 | Hive               | http://Hadoopjc:10002 |
 | Flink              | http://Hadoopjc:8081  |
-| Spark Master       | http://Hadoopjc:6060/ |
-| Spark Worker       | http://Hadoopjc:6066/ |
-
+| Spark Master       | http://Hadoopjc:6060  |
+| Spark Worker       | http://Hadoopjc:6066  |
