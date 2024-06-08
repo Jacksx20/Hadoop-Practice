@@ -16,3 +16,4 @@ start-cluster.sh
 jps
 ```
 
+<img src="imgs/image-20240606203847093.png" alt="image-20240606203847093" style="zoom:80%;" />

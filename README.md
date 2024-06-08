@@ -10,13 +10,13 @@ start-dfs.sh
 start-yarn.sh
 mr-jobhistory-daemon.sh start historyserver
 
-start-hbase.sh
+/usr/local/hbase start-hbase.sh
 
 hive --service metastore &
 hive --service hiveserver2 &
 
-start-cluster.sh
-
+/usr/local/flink/start-cluster.sh
+/usr/local/spark/sbin/start-all.sh
 
 
 STOP-----------------------------------------------------
@@ -44,6 +44,7 @@ zkServer.sh stop
 | HBase Master       | http://172.16.222.20:60010 |
 | HBase RegionServer | http://172.16.222.20:60030 |
 | Hive               | http://172.16.222.20:10002 |
+| Flink              | http://172.16.222.20:8081  |
 
 ```shell
 #查看 HBase 在 Zookeeper 中的 znode
