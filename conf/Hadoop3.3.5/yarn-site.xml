@@ -18,7 +18,55 @@
                 <value>Hadoopjc</value>
         </property>
         <property>
+                <name>yarn.log.server.url</name>
+                <value>http://Hadoopjc:19888/jobhistory/logs</value>
+                <description>解决通过yarn提交任务出现
+                Failed while trying to construct the redirect url to the log server. Log Server url may
+		</description>
+        </property>
+        <property>
+                <name>yarn.nodemanager.resource.memory-mb</name>
+                <value>10240</value>
+        </property>
+        <property>
                 <name>yarn.nodemanager.aux-services</name>
                 <value>mapreduce_shuffle</value>
+        </property>
+        <property>
+                <name>yarn.resourcemanager.zk-address</name>
+                <value>Hadoopjc:2181</value>
+        </property>
+        <property>
+                <name>yarn.log-aggregation-enable</name>
+                <value>true</value>
+	        <description>
+		     开启日志聚集功能，任务执行完之后，将日志文件自动上传到文件系统（如HDFS文件系统），
+		     否则通过namenode1:8088页面查看日志文件的时候，会报错
+		     "Aggregation is not enabled. Try the nodemanager at Hadoopjc:38101"
+		</description>
+        </property>
+        <property>
+                <name>yarn.log-aggregation.retain-seconds</name>
+                <value>302400</value>
+	        <description>
+		     日志文件保存在文件系统（如HDFS文件系统）的最长时间，默认值是-1，即永久有效。
+		     这里配置的值是：7天 = 3600 * 24 * 7 = 302400
+		</description>
+        </property>
+        <property>
+                <name>yarn.nodemanager.vmem-check-enabled</name>
+                <value>false</value>
+        </property>
+        <property>
+                <name>yarn.nodemanager.pmem-check-enabled</name>
+                <value>false</value>
+        </property>
+        <property>
+                <name>yarn.nodemanager.numa-awareness.enabled</name>
+                <value>true</value>
+        </property>
+        <property>
+                <name>yarn.nodemanager.numa-awareness.read-topology</name>
+                <value>true</value>
         </property>
 </configuration>
