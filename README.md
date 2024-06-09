@@ -2,6 +2,10 @@
 
 Basic Programming Practice of Big Data
 
+环境：Ubantu22.04 4C 12G 伪分布式
+
+启动服务
+
 ```bash
 cd /usr/local/hadoop
 zkServer.sh start
