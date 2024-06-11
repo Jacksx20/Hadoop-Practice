@@ -28,7 +28,7 @@ public class HivetoMySQL {
             // InsertToMysql
             try {
                 Class.forName(driverName_mysql);
-                Connection con2 = DriverManager.getConnection("jdbc:mysql://Hadoopjc:3306/dblab", "root", "root");
+                Connection con2 = DriverManager.getConnection("jdbc:mysql://Hadoopjc:3306/dblab", "hive", "hive");
                 String sql2 = "insert into user_action(id,uid,item_id,behavior_type,item_category,visit_date,province) values (?,?,?,?,?,?,?)";
                 PreparedStatement ps = con2.prepareStatement(sql2);
                 while (res.next()) {

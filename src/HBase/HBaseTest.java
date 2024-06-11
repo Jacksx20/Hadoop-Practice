@@ -24,7 +24,7 @@ public class HBaseTest {
 
     public static void init() {
         configuration = HBaseConfiguration.create();
-        configuration.set("hbase.rootdir", "hdfs://172.16.222.20:9000/hbase");
+        configuration.set("hbase.rootdir", "hdfs://Hadoopjc:9000/hbase");
         try {
             connection = ConnectionFactory.createConnection(configuration);
             admin = connection.getAdmin();

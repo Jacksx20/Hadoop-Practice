@@ -12,7 +12,7 @@ import org.apache.hadoop.fs.FSDataOutputStream;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
 
-//定义一个公共的类，包含了Configuration conf = new Configuration();  conf.set("fs.defaultFS", "hdfs://172.16.222.20:9000");conf.set("fs.hdfs.impl", "org.apache.hadoop.hdfs.DistributedFileSystem");
+//定义一个公共的类，包含了Configuration conf = new Configuration();  conf.set("fs.defaultFS", "hdfs://Hadoopjc:9000");conf.set("fs.hdfs.impl", "org.apache.hadoop.hdfs.DistributedFileSystem");
 
 //定义一个公共的类，包含了判断文件是否存在、写入文件、读取文件的方法
 public class AllFile {
@@ -22,7 +22,7 @@ public class AllFile {
         String filename = "file1.txt";
 
         Configuration conf = new Configuration();
-        conf.set("fs.defaultFS", "hdfs://172.16.222.20:9000");
+        conf.set("fs.defaultFS", "hdfs://Hadoopjc:9000");
         conf.set("fs.hdfs.impl", "org.apache.hadoop.hdfs.DistributedFileSystem");
         FileSystem fs = FileSystem.get(conf);
         if (fs.exists(new Path(filename))) {
@@ -36,7 +36,7 @@ public class AllFile {
     // 写入文件
     public static void WriteFile() throws IOException {
         Configuration conf = new Configuration();
-        conf.set("fs.defaultFS", "hdfs://172.16.222.20:9000");
+        conf.set("fs.defaultFS", "hdfs://Hadoopjc:9000");
         conf.set("fs.hdfs.impl", "org.apache.hadoop.hdfs.DistributedFileSystem");
         FileSystem fs = FileSystem.get(conf);
         byte[] buff = "Hello world".getBytes(); // 要写入的内容
@@ -51,7 +51,7 @@ public class AllFile {
     // 读取文件
     public static void ReadFile() throws IOException {
         Configuration conf = new Configuration();
-        conf.set("fs.defaultFS", "hdfs://172.16.222.20:9000");
+        conf.set("fs.defaultFS", "hdfs://Hadoopjc:9000");
         conf.set("fs.hdfs.impl", "org.apache.hadoop.hdfs.DistributedFileSystem");
         FileSystem fs = FileSystem.get(conf);
         Path file = new Path("file1.txt");

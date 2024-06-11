@@ -39,7 +39,7 @@ public class MergeFile {
 
     public void doMerge() throws IOException {
         Configuration conf = new Configuration();
-        conf.set("fs.defaultFS", "hdfs://172.16.222.20:9000");
+        conf.set("fs.defaultFS", "hdfs://Hadoopjc:9000");
         conf.set("fs.hdfs.impl", "org.apache.hadoop.hdfs.DistributedFileSystem");
         FileSystem fsSource = FileSystem.get(URI.create(inputPath.toString()), conf);
         FileSystem fsDst = FileSystem.get(URI.create(outputPath.toString()), conf);
@@ -72,8 +72,8 @@ public class MergeFile {
         Properties properties = System.getProperties();
         properties.setProperty("HADOOP_USER_NAME", "jack");
         MergeFile merge = new MergeFile(
-                "hdfs://172.16.222.20:9000/user/jack/",
-                "hdfs://172.16.222.20:9000/user/jack/merge.txt");
+                "hdfs://Hadoopjc:9000/user/jack/",
+                "hdfs://Hadoopjc:9000/user/jack/merge.txt");
         merge.doMerge();
     }
 }
