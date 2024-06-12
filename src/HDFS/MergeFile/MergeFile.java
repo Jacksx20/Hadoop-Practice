@@ -1,4 +1,4 @@
-package src.HDFS.MergeFile;
+package HDFS.MergeFile;
 
 import java.io.IOException;
 import java.io.PrintStream;

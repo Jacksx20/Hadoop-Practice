@@ -1,4 +1,4 @@
-package src.MapReduce;
+package MapReduce;
 
 import java.io.IOException;
 import java.util.Iterator;

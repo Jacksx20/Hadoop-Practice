@@ -1,4 +1,4 @@
-package src.HDFS.AllFile;
+package HDFS.AllFile;
 
 import java.io.BufferedReader;
 import java.io.IOException;
