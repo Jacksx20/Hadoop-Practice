@@ -14,7 +14,7 @@ start-dfs.sh
 start-yarn.sh
 mr-jobhistory-daemon.sh start historyserver
 
-/usr/local/hbase start-hbase.sh
+start-hbase.sh
 
 hive --service metastore &
 hive --service hiveserver2 &
